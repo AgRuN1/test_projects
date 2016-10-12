@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Get info about user</title>
+	<script src='' id="script"></script>
+</head>
+<body>
+	<input type="text" id="text">
+	<input type="button" id="submit" value="Получить данные">
+	<div id="content">
+		<p id="name">Введите id интересующей вас страницы</p>
+		<img src="" alt="" id="photo">
+	</div>
+	<script>
+		window.onload=function(){
+			document.getElementById("submit").onclick=getInfo;
+		}
+		function getInfo(){
+			var id=document.getElementById("text").value;
+			var script=document.getElementById("script");
+			script.parentNode.removeChild(script);
+			var script=document.createElement('script');
+			script.setAttribute("id","script");
+			script.setAttribute("src","//api.vk.com/method/users.get?user_ids="+id+"&v=5.53&callback=fullfiled&fields=has_photo,photo_200")
+			document.getElementsByTagName('head')[0].appendChild(script);
+		}
+		function fullfiled(response){
+			if(response.response){
+				var name=response.response[0].first_name;
+				var surname=response.response[0].last_name;
+				var a=document.createElement("a");
+				a.href="//vk.com/id"+response.response[0].id;
+				a.target="_blank";
+				a.appendChild(document.createTextNode(name+" "+surname));
+				document.getElementById("name").replaceChild(a,document.getElementById("name").firstChild);
+				if(response.response[0].has_photo==1){
+					if(response.response[0].photo_200){
+						var ava=document.createElement("img");
+						ava.id='photo';
+						ava.alt='';
+						ava.src=response.response[0].photo_200;
+						document.getElementById("photo").parentNode.replaceChild(ava,document.getElementById("photo"));
+					}else
+						removePhoto();
+				}else
+				removePhoto();
+			}else{
+				var error=document.createElement("p");
+				error.appendChild(document.createTextNode("Упс, похоже возникла ошибка, попробуйте еще!"));
+				error.id='name';
+				var text=document.getElementById("name");
+				text.parentNode.replaceChild(error,text)
+			}
+		}
+		function removePhoto(){
+			var emptyPhoto=document.createElement("img");
+			emptyPhoto.id='photo';
+			emptyPhoto.alt='';
+			emptyPhoto.src='';
+			var photo=document.getElementById("photo");
+			photo.parentNode.replaceChild(emptyPhoto,photo);
+			removePhoto();
+		}
+	</script>
+</body>
+</html>

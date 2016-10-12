@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pass Test</title>
+	<link rel="stylesheet" href="bootstrap/font-awesome-4.6.3/css/font-awesome.css">
+	<style>
+		#pass{
+			width:300px;
+			height:20px;
+			border:1px solid blue;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+	<form action="passtest.php"methos="post">
+	<div contenteditable id="pass">Пароль</div>
+		<input type="hidden"name="pass"id="passw">
+		<input type="submit">
+
+	</form>
+	
+	<script>
+	window.onload=function(){
+		var newP=$("#pass");
+		var sendP=$("#passw");
+		newP.focus(foc);
+		newP.blur(blur);
+		document.getElementById('pass').oninput=refresh;
+		function refresh(){
+			var text=newP.text();
+			for(var i=0;i<text.length;i++){
+				var char=text[i];
+				var ch=document.createElement("i");
+				ch.setAttribute("class","fa fa-key");
+				ch.setAttribute("data-char","char");
+				console.log(ch);
+				newP.html(ch.outerHTML)
+			}
+		}
+		function foc(){
+			if(newP.text()=='Пароль')
+				newP.text('');
+		}
+		function blur(){
+			if(newP.text()==''){
+				newP.text('Пароль');
+			}
+		}
+	}
+	</script>
+</body>
+</html>

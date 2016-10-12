@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+@media screen and (max-width: 767px){
+  .masonry[data-columns]:before{
+    content:"2 .col-xs-12";
+  }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+  .masonry[data-columns]:before{
+    content:"2 .col-xs-6";
+  }
+}
+@media screen and (min-width:992px) and (max-width:1199px){
+  .masonry[data-columns]:before{
+          content:"3 .col-xs-4";
+  }
+}
+@media screen and (min-width:1200px){
+  .masonry[data-columns]:before{
+          content:"3 .col-xs-4";
+  }
+}
+.breadcrumb>li+li:before{
+  content:'\f105';
+  font-family:'FontAwesome';
+}
+  </style>
+  <title>Menu</title>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-static-top">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle"data-toggle="collapse" data-target="#responsive-menu">
+           <span class="sr-only">Открыть навигацию</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+        <a href="#" class="navbar-brand">Логотип</a>
+       </div>
+       <div class="collapse navbar-collapse" id="responsive-menu">
+         <ul class="nav navbar-nav">
+           <li><a href="#">Пункт: 1</a></li>
+           <li><a href="#">Пункт: 2</a></li>
+           <li class="dropdown">
+             <a href="#"class="dropdown-toggle" data-toggle="dropdown">Пункт: 3 <b class="caret"></b></a>
+             <ul class="dropdown-menu">
+               <li><a href="#">Подпункт: 1</a></li>
+               <li><a href="#">Подпункт: 2</a></li>
+               <li><a href="#">Подпункт: 3</a></li>
+               <li class="divider"></li>
+               <li><a href="#">Подпункт: 4</a></li>
+             </ul>
+           </li>
+           <li><a href="#">Пункт: 4</a></li>
+           <li><a href="#">Пункт: 5</a></li>
+
+         </ul>
+
+       </div>
+     </div>
+  </div>
+  <ul class="breadcrumb">
+    <li>
+      <a href="#">Блог</a>
+    </li>
+    <li><a href="#">Описание</a></li>
+    <li><a href="#">Страницы</a></li>
+    <li><a href="#">Записи</a></li>
+  </ul>
+  <h1>Название сайта</h1>
+  <div class="container">
+    <div class="row">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Элемент: 0 <span class="badge">15</span></a></li>
+          <li><a href="#">Элемент: 1 <span class="badge">43</span></a></li>
+          <li><a href="#">Элемент: 2<span class="badge">25</span></a></li>
+          <li><a href="#">Элемент: 3<span class="badge">36</span></a></li>
+
+      </ul>
+    </div>
+    <div class="row masonry"data-columns>
+
+         <div class="item">
+           <div class="thumbnail">
+             <img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div>
+           </div>
+         </div>
+         <div>
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+         <div class="item">
+           <div class="thumbnail"><img src="http://placehold.it/300x240" alt="">
+             <div class="caption">
+               <h3>Заголовок</h3>
+               <p>
+                 ПОВАДПОВАПРВАПРВЛАПРВАЛПОРВАПЛОВАРП
+                 ОЛВАРПОЛВАРПВАЛОПРВАЛПРВАПЛВАОПРВАЛОПР
+               </p>
+               <a href="#" class="btn btn-success" alt="">Подробнее<i class="fa fa-arrow-right"></i></a>
+             </div></div>
+         </div>
+    </div>
+  </div>
+  <div class="nav text-center">
+    <ul class="pagination pagination-lg">
+      <li class="disabled"><a href="">
+        <i class="fa fa-chevron-left"></i>
+        <i class="fa fa-chevron-left"></i>
+      </a></li>
+      <li class="disabled"><a href=""><i class="fa fa-chevron-left"></i></a></li>
+      <li class="active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">
+        <i class="fa fa-chevron-right"></i>
+      </a></li>
+      <li><a href="#">
+        <i class="fa fa-chevron-right"></i>
+        <i class="fa fa-chevron-right"></i>
+      </a></li>
+    </ul>
+  </div>
+  <nav>
+    <ul class="pager">
+
+      <li class="previous"><a href="#">&larr; Назад</a></li>
+      <li class="next disabled"><a href="">Вперед &rarr;</a></li>
+    </ul>
+  </nav>
+  
+
+  <!-- Origional snipet by msurguy<http://bootsnipp.com/msurguy>, I editted his snipet so that it works with bootstrap 3.3 -->
+  <div class="container">
+      <div class="row">
+              <div class="col-xs-3">
+                  <ul class="list-unstyled">
+                      <li>GitHub<li>
+                      <li><a href="#">About us</a></li>
+                      <li><a href="#">Blog</a></li>
+                      <li><a href="#">Contact & support</a></li>
+                      <li><a href="#">Enterprise</a></li>
+                      <li><a href="#">Site status</a></li>
+                  </ul>
+              </div>
+              <div class="col-xs-3">
+                  <ul class="list-unstyled">
+                      <li>Applications<li>
+                      <li><a href="#">Product for Mac</a></li>
+                      <li><a href="#">Product for Windows</a></li>
+                      <li><a href="#">Product for Eclipse</a></li>
+                      <li><a href="#">Product mobile apps</a></li>
+                  </ul>
+              </div>
+              <div class="col-xs-3">
+                  <ul class="list-unstyled">
+                      <li>Services<li>
+                      <li><a href="#">Web analytics</a></li>
+                      <li><a href="#">Presentations</a></li>
+                      <li><a href="#">Code snippets</a></li>
+                      <li><a href="#">Job board</a></li>
+                  </ul>
+              </div>
+              <div class="col-xs-3">
+                  <ul class="list-unstyled">
+                      <li>Documentation<li>
+                      <li><a href="#">Product Help</a></li>
+                      <li><a href="#">Developer API</a></li>
+                      <li><a href="#">Product Markdown</a></li>
+                      <li><a href="#">Product Pages</a></li>
+                  </ul>
+              </div>
+      </div>
+      <hr>
+      <div class="row">
+              <div class="col-xs-8">
+                  <ul class="list-unstyled list-inline pull-left">
+                      <li><a href="#">Terms of Service</a></li>
+                      <li><a href="#">Contact Us</a></li>
+                      <li><a href="#">Privacy</a></li>
+                  </ul>
+              </div>
+              <div class="col-xs-4">
+                  <p class="text-muted pull-right">© 2015 Company Name. All rights reserved</p>
+              </div>
+          </div>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="salvattore.min.js"></script>
+</body>
+</html>

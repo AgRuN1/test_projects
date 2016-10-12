@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+a.opensp:after{
+  content:" [-] ";
+}
+a.collapsed:after{
+  content:" [+] ";
+}
+  </style>
+  <title>Slider</title>
+</head>
+<body>
+<p>
+  <a href="#"class="btn btn-default btn-lg">Пункт: 1</a>
+  <a href="#"class="btn btn-primary btn-lg">Пункт: 2</a>
+  <a href="#"class="btn btn-success btn-sm">Пункт: 3</a>
+  <a href="#"class="btn btn-warning btn-md">Пункт: 4</a>
+  <a href="#"class="btn btn-info btn-xs">Пункт: 5</a>
+    <a href="#"class="btn btn-info btn-xs disabled">Пункт: 6</a>
+  <a href="#"class="btn btn-danger active btn-block">Пункт: 7</a>
+</p>
+<p><i class="fa fa-spinner fa-spin"></i></p>
+<div class="btn-group btn-group-lg btn-group-vertical">
+  <a href="#" class="btn btn-success"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="btn btn-success"><i class="fa fa-vk"></i></a>
+  <a href="#" class="btn btn-success"><i class="fa fa-twitter"></i></a>
+</div>
+<div class="btn-group pull-right">
+  <button class="btn btn-warning">Кнопочка</button>
+  <button class="btn btn-danger dropdown-toggle"data-toggle="dropdown"><span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Ссылка: 1</a></li>
+    <li><a href="#">Ссылка: 2</a></li>
+    <li><a href="#">Ссылка: 3</a></li>
+    <li><a href="#">Ссылка: 4</a></li>
+    <li><a href="#">Ссылка: 5</a></li>
+  </ul>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="tabs">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab-1" data-toggle="tab">Пункт: 1</a></li>
+    <li><a href="#tab-2" data-toggle="tab">Пункт: 2</a></li>
+    <li><a href="#tab-3" data-toggle="tab">Пункт: 3</a></li>
+    <li><a href="#tab-4" data-toggle="tab">Пункт: 4</a></li>
+    <li><a href="#tab-5" data-toggle="tab">Пункт: 5</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active in"id="tab-1">
+      <p>Контент для вкладки 1</p>
+    </div>
+    <div class="tab-pane fade"id="tab-2">
+      <p>Контент для вкладки 2</p>
+    </div>
+    <div class="tab-pane fade"id="tab-3">
+      <p>Контент для вкладки 3</p>
+    </div>
+    <div class="tab-pane fade"id="tab-4">
+      <p>Контент для вкладки 4</p>
+    </div>
+    <div class="tab-pane fade"id="tab-5">
+      <p>Контент для вкладки 5</p>
+    </div>
+  </div>
+</div>
+  <a href="#spoiler-1"class="btn btn-primary collapsed opensp"data-toggle="collapse">Cпойлер</a>
+<div class="collapse"id="spoiler-1">
+  <div class="well">
+    <p>Текст</p>
+  </div>
+</div>
+<div>
+<a href="#" class="btn btn-primary" data-toggle="tooltip" data-placement="right"title="Простая подсказка">Кнопка</a>
+<button type="button" class="btn btn-success" data-toggle="popover" data-placement="bottom"data-trigger="focus"title="Заголовок окна"data-content="Текст окна">Кнопка</button>
+</div>
+<div class="alert alert-danger alert-dismissible">
+  <button class="close" type="button"data-dismiss="alert"><i class="fa fa-times"></i></button>
+  <h4>Ошибка</h4>
+  1 <a href="#" class="alert-link">Клик</a>
+</div>
+<div class="alert alert-info">
+  2
+</div>
+<div class="alert alert-warning">
+  3
+</div>
+<div class="alert alert-success">
+  4
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+  $(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
+  })
+</script>
+</body>
+</html>

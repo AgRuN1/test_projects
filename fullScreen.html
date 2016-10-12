@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FullScreen</title>
+</head>
+<body>
+	<img src="3.jpg" id="photo" alt="">
+	<button id="enter">Войти</button>
+	<script>
+		window.onload=function(){
+			document.getElementById("enter").onclick=enter;
+		}
+		function enter(){
+			try{
+				document.getElementById("photo").mozRequestFullScreen();
+			}catch(e){
+				try
+					document.getElementById("photo").webkitRequestFullScreen();
+				catch(e)
+					document.getElementById("photo").msRequestFullScreen();
+		}
+	}
+	</script>
+</body>
+</html>

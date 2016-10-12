@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+  .container .row{
+
+  }
+  </style>
+  <title>Modal</title>
+</head>
+<body>
+<div class="col-md-6">
+  <div id="accordion" class="panel-group">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+          <h4 class="panel-title">
+            <a href="#collapse-1"data-toggle="collapse"data-parent="#accordion">Открыть первый слайд</a>
+          </h4>
+      </div>
+      <div class="panel-collapse collapse"id="collapse-1">
+          <div class="panel-body">
+            <p>
+              любой контент
+              любой контент любой контент любой контент любой контент
+            </p>
+          </div>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+          <h4 class="panel-title">
+            <a href="#collapse-2"data-toggle="collapse"data-parent="#accordion">Открыть второй слайд</a>
+          </h4>
+      </div>
+      <div class="panel-collapse collapse in"id="collapse-2">
+          <div class="panel-body">
+            <p>
+              любой контент
+              любой контент любой контент любой контент любой контент
+            </p>
+          </div>
+      </div>
+    </div>
+    <div class="panel panel-default"></div>
+  </div>
+</div>
+<div class="col-md-6">
+<button class="btn btn-success" type="button"data-target="#modal-1"data-toggle="modal">Открыть модальное окно</button>
+</div>
+<div class="modal fade" id="modal-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close"type="button"data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Это модальное окно</h4>
+      </div>
+      <div class="modal-body">
+
+        <p>БЛА БЛА БЛА БЛА БЛА БЛА БЛА БЛА</p>
+        <button class="close"type="button"data-dismiss="modal"></button>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" type="button"data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-success"style="min-width:2%;width:100%">
+    100%
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

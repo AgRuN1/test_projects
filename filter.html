@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <style>
+  main{
+    position:fixed;
+    top:0px;left:0px;right: 0px;bottom:0px;
+background-image:url("2.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+}
+#content{
+  padding:20px;
+  position:relative;
+  margin:20% auto;
+  background-color:rgba(255,255,255,.4);
+  width:600px;
+  height: 150px;;
+}
+#content:before{
+  content:'';
+  width:640px;height: 190px;
+  position:absolute;
+  top:0px;left:0px;
+  filter:blur(4px);
+  background-image:url("2.jpg");
+  z-index:-5;
+}
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Filter</title>
+</head>
+<body>
+<main>
+<div id="content">
+Много много контента.
+Для новичков скажу, что язык CSS (англ. Cascading Style Sheets, в переводе Каскадные Таблицы стилей) — это язык описания внешнего вида веб-страницы. Что это значит? А значит это то, что с помощью данного языка формируется внешний вид любого сайта.
+Через CSS мы можем воздействовать на любой элемент страницы, будь-то текст или картинка, можем сдвинуть его в любом направлении или раскрасить в нужный цвет.
+</div>
+</main>
+</body>
+</html>

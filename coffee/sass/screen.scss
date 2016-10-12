@@ -1,0 +1,19 @@
+@import "normalize";
+$color:red;
+ul{
+	font-family:sans-serif;
+	a{
+		color:$color;
+		text-decoration:none;
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+}
+@mixin back($color,$size){
+	background-color:$color;
+	background-size:$size;
+}
+p{
+	@include back(red,100px);
+}

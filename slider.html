@@ -1,0 +1,107 @@
+<!doctype html>
+      <html lang="ru">
+      <head>
+      <link rel="stylesheet" href="styleForSlider.css">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>slider</title>
+      </head>
+      <body>
+      <div id ="caption">
+      
+      </div>
+      <div id ="sliders">
+
+
+   <div id="control">
+    <img src="right-two.png" alt="" id="right-control"
+    Enabled="true">
+    <img src="left-two.png" alt="" id="left-control" Enabled="true">
+    </div>
+    <ul id="slider">
+      <li class="slider-item active"><img src="1.jpg" alt=""></li>
+      <li class="slider-item"><img src="2.jpg" alt=""></li>
+      <li class="slider-item"><img src="3.jpg" alt=""></li>
+      <li class="slider-item"><img src="4.jpg" alt=""></li>
+      <li class="slider-item"><img src="5.jpg" alt=""></li>
+    </ul>
+     
+  </div>
+  <script src="query-min.js"></script>
+<script>
+  $(document).ready(function(){
+
+    var leftsize=-40;
+    var number=0;
+    var texts=[
+    'Первая картинка',
+    'Вторая картинка',
+    'Третья картинка',
+    'Четвертая картинка',
+    'Пятая картинка']
+    $("#caption").text(texts[number]);
+    var timer=setInterval(nextslide,5000);
+    function nextslide(){
+      if($("#right-control").attr("Enabled")=="true"){
+      clearInterval(timer);
+      $("#left-control").attr("Enabled",false);
+      $("#right-control").attr("Enabled",false);
+      if(leftsize==-3040)
+        leftsize=-40;
+      else if(leftsize==-40)
+        leftsize=-790;
+      else 
+        leftsize-=750;
+      if(number==4)
+        number=0;
+      else
+        number++;
+      $("#caption").slideUp(500,function(){
+        $("#caption").text(texts[number]).slideDown(500);
+       });
+      $("#slider").css("left",leftsize);
+      timer=setInterval(nextslide,5000);
+      $("#left-control").attr("Enabled",true);
+      $("#right-control").attr("Enabled",true);
+    }
+    }
+    $("#left-control").click(function(){
+      if($("#left-control").attr("Enabled")=="true"){
+      $("#left-control").attr("Enabled",false);
+      $("#right-control").attr("Enabled",false);
+      clearInterval(timer);
+      if(leftsize==-40)
+        leftsize=-3040;
+      else if(leftsize==-750)
+        leftsize=0;
+      else 
+        leftsize+=750;
+      if(number==0)
+        number=4;
+      else
+        number--
+      $("#caption").slideUp(500,function(){
+        $("#caption").text(texts[number]).slideDown(500);
+      });
+      $("#slider").css("left",leftsize);
+      timer=setInterval(nextslide,5000);
+      $("#left-control").attr("Enabled",true);
+      $("#right-control").attr("Enabled",true);
+    }
+    });
+    $("#right-control").click(nextslide);
+    $("#sliders").hover(function(){
+      $("#left-control").css("marginLeft","0px");
+      $("#right-control").css("marginRight","0px");
+    },
+    function(){
+      $("#left-control").css("marginLeft","-30px");
+      $("#right-control").css("marginRight","-30px");
+    });
+  });
+</script>
+
+  </body>
+
+</html>

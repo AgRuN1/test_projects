@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Accordion</title>
+	<link rel="stylesheet" href="styleForAccordion.css">
+</head>
+<body>
+	<ul class="accordion-list">
+		<li class="accordion-item">
+			<div class="accordion">
+				<h2 class="accordion-trigger">Триггер: 1</h2>
+				<ul class="accordion-list-link">
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 1</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 2</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 3</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 4</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 5</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="accordion-item">
+			<div class="accordion">
+				<h2 class="accordion-trigger">Триггер: 2</h2>
+				<ul class="accordion-list-link">
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 1</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 2</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 3</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 4</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 5</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="accordion-item">
+			<div class="accordion">
+				<h2 class="accordion-trigger">Триггер: 3</h2>
+				<ul class="accordion-list-link">
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 1</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 2</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 3</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 4</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 5</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="accordion-item">
+			<div class="accordion">
+				<h2 class="accordion-trigger">Триггер: 4</h2>
+				<ul class="accordion-list-link">
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 1</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 2</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 3</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 4</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 5</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="accordion-item">
+			<div class="accordion">
+				<h2 class="accordion-trigger">Триггер: 5</h2>
+				<ul class="accordion-list-link">
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 1</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 2</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 3</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 4</a></li>
+					<li class="accordion-link"><a href="#" alt="">Ссылка: 5</a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+	<script src="jquery.js"></script>
+	<script>
+		$(function(){
+			$(".accordion-trigger").click(function(e){
+ 				var $this=$(this),
+ 				list=$this.closest('.accordion-list'),
+ 				item=$this.closest('.accordion'),
+ 				content=item
+ 				.find('.accordion-list-link'),
+ 				list_link=list
+ 				.find('.accordion-list-link'),
+ 				duration=300,
+ 				otherContent=list
+ 				.find('.accordion-list-link');
+ 				otherContent.slideUp(duration);
+ 				if(content.css("display")=="none")
+ 					content.slideDown(duration);
+			});
+		});
+	</script>
+</body>
+</html>

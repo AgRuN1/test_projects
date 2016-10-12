@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<link rel="stylesheet" href="ionicons-2.0.1\css/ionicons.css">
+	<meta charset="UTF-8">
+	<title>Vue test</title>
+	<style>
+		#editor{
+			border:2px solid blue;
+			width: 300px;
+			height:18px;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<p v-text="text"></p>
+		<ul>
+			<li v-for="comment in comments">{{comment}}</li>
+		</ul>
+		<input type="text" v-el="comment" v-model='comment'v-on:keyup.enter="addComment($event)">
+	</div>
+	<div contenteditable="" id="editor">Пароль</div>
+	<script src="vue.min.js"></script>
+	<script src="../jquery.js"></script>
+	<script>
+		new Vue({
+			el:"#app",
+			data:{
+				text:'Простой текст',
+				comments:[],
+				comment:''
+			},
+			methods:{
+				addComment:function(e){
+					e.preventDefault();
+					this.comments.push(this.$$.comment.value);
+					this.comment='';
+				}
+			}
+		});
+		window.onload=function(){
+			var editor=document.getElementById("editor");
+            editor.oninput=log;
+			editor.onkeyup=log;
+			editor.onkeydown=function(e){
+				if(e.keyCode==13)
+					e.preventDefault();
+			}
+			editor.onfocus=function(){
+				if(editor.textContent=="Пароль"){
+					editor.textContent=''
+				}
+			}
+			editor.onblur=function(){
+				if(editor.textContent==''){
+					editor.textContent='Пароль';
+				}
+			}
+			function log(){
+				console.log(editor.textContent);
+			}
+		}
+	</script>
+</body>
+</html>

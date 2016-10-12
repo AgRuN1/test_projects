@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<style>
+		body{
+			width:2500px;
+		}
+		.class1{
+			background:yellowgreen;
+		}
+		.class2{
+			background:rgb(60,100,255);
+		}
+	</style>
+	<meta charset="UTF-8">
+	<script src="../angular.min.js"></script>
+	<title>Angular practik</title>
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../bootstrap/font-awesome-4.6.3/css/font-awesome.css">
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body ng-app="listGetWall" ng-controller="listGetWallCtrl"ng-cloak id="maint">
+
+	<table class="table">
+		<thead>
+		<tr>
+		<th>Number</th>
+			<th ng-repeat="(key,value) in items.response.items[0]" >
+				{{key}}
+			</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="post in items.response.items"ng-class="$even ?'class1':'class2'">
+			<td>{{$index+1}}<span ng-if="$first">First</span>
+			<span ng-if="$last">Last</span></td>
+			<td ng-repeat="(key,value) in post">{{value}}</td>
+		</tr>
+		</tbody>
+	</table>
+	<div ng-if="elem">{{2+2}}</div>
+	<input type="checkbox"ng-model="elem">
+	<div order="elem"></div>
+	<button type="button" ng-click="getInfo()">Получить</button>
+	<select ng-model="selected"ng-options="item.prop1 for item in nitems track by item.prop2"></select>
+	{{selected.prop1}}
+	<div ng-controller="baseCtrl">
+		<p>{{value}}</p>
+		<button ng-click="changeValue()">Сменить</button>
+		<div ng-controller="childCtrl">
+			<p>{{newValue}}</p>
+		</div>
+	</div>
+	<div ng-controller="countCtrl">
+	<p>{{counter}}</p>
+	<button ng-click="inc()">Инкремент</button>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="work.js"></script>
+</body>
+</html>

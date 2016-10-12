@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="styleForTabs.css">
+</head>
+<body>
+  <ul class="btn-list">
+     <li class="tab-btn active">
+     <a href="#" alt=""class="tab-link">Кнопка: 1</a></li>
+     <li class="tab-btn">
+     <a href="#" alt=""class="tab-link">Кнопка: 2
+     </a></li>
+     <li class="tab-btn">
+     <a href="#" alt=""class="tab-link">Кнопка: 3</a></li>
+     <li class="tab-btn">
+     <a href="#" alt=""class="tab-link">Кнопка: 4</a></li>
+     <li class="tab-btn">
+     <a href="#" alt=""class="tab-link">Кнопка: 5</a></li>
+  </ul>
+  <ul class="tab-list">
+   <li class="tab-item active">
+     <h1>Контент: 1</h1>
+     <p>Благодаря этому лайфхаку забываем про поиск и замену (find what, raplace with, replace next/all). Выбрав определенный текст и нажав на необходимые клавиши, Sublime находит все совпадения и создает «объединенный курсор» на все строки, где есть совпадения. </p>
+   </li>
+   <li class="tab-item">
+     <h1>Контент: 2</h1>
+     <p>Благодаря этому лайфхаку забываем про поиск и замену (find what, raplace with, replace next/all). Выбрав определенный текст и нажав на необходимые клавиши, Sublime находит все совпадения и создает «объединенный курсор» на все строки, где есть совпадения. </p>
+   </li>
+   <li class="tab-item">
+     <h1>Контент: 3</h1>
+     <p>Благодаря этому лайфхаку забываем про поиск и замену (find what, raplace with, replace next/all). Выбрав определенный текст и нажав на необходимые клавиши, Sublime находит все совпадения и создает «объединенный курсор» на все строки, где есть совпадения. </p>
+   </li>
+   <li class="tab-item">
+     <h1>Контент: 4</h1>
+     <p>Благодаря этому лайфхаку забываем про поиск и замену (find what, raplace with, replace next/all). Выбрав определенный текст и нажав на необходимые клавиши, Sublime находит все совпадения и создает «объединенный курсор» на все строки, где есть совпадения. </p>
+   </li>
+   <li class="tab-item">
+     <h1>Контент: 5</h1>
+     <p>Благодаря этому лайфхаку забываем про поиск и замену (find what, raplace with, replace next/all). Выбрав определенный текст и нажав на необходимые клавиши, Sublime находит все совпадения и создает «объединенный курсор» на все строки, где есть совпадения. </p>
+   </li>
+  </ul>
+  <script src="query-min.js"></script>
+  <script>
+   $(function(){
+      $(".tab-link").click(function(e){
+         e.preventDefault();
+         var item=$(this).closest(".tab-btn"),
+         contentItem=$(".tab-item"),
+         contentPosition=item.index();
+         console.log(contentPosition);
+         contentItem.eq(contentPosition)
+         .addClass("active")
+         .siblings()
+         .removeClass("active");
+         item
+         .addClass("active")
+         .siblings()
+         .removeClass("active");
+      });
+   });
+  </script>
+</body>
+</html>

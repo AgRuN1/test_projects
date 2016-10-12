@@ -1,0 +1,23 @@
+.tab-item:not(.active){
+	display:none;
+}
+.btn-list>.active>a{
+	color:blue;
+}
+.tab-btn a{
+	text-decoration:none;
+}
+.tab-btn{
+	width:80px;
+	height:20px;
+}
+.tab-btn:not(.active) a{
+	color:white;
+	background-color:green;
+}
+.btn-list li{
+	display:inline-block;
+}
+.tab-list{
+	list-style:none;
+}
